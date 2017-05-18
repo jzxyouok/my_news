@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.hades.my_news_android.view.widget.DragLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/head_bg"
+    android:id="@+id/drag_layout"
+    >
+
+    <include layout="@layout/left_view_layout" />
+    <org.hades.my_news_android.view.widget.CustomRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+            <!--顶部导航栏布局-->
+            <include layout="@layout/top_bar_common_layout"/>
+            <!--中间内容后面放入Fragment-->
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+
+                <fragment
+                    android:id="@+id/fragment1"
+                    class="org.hades.my_news_android.view.fragment.MainFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </FrameLayout>
+        </LinearLayout>
+
+    </org.hades.my_news_android.view.widget.CustomRelativeLayout>
+
+</org.hades.my_news_android.view.widget.DragLayout>
